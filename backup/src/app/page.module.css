@@ -1,0 +1,230 @@
+/* Container Layout */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #004d2c 0%, #006838 50%, #008243 100%);
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding-bottom: 4rem;
+}
+
+/* Hero Section */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+}
+
+.heroContent {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.pillBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.heroSubtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+}
+
+/* Search Wrapper & Booking.com Style Box */
+.searchWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.bookingBoxContainer {
+  background: #ffffff;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  padding: 1.75rem;
+  border: 4px solid #ffb700; /* Signature Booking.com yellow accent border */
+}
+
+.searchSectionBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookingSearchTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #003580;
+  margin-bottom: 0.75rem;
+}
+
+/* Enhanced Navigation Section */
+.enhancedNavSection {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.enhancedNavHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #004d2c;
+  margin-bottom: 1rem;
+}
+
+.compassIcon {
+  color: #ffb700;
+}
+
+.navLinksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.enhancedNavCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f8fafc;
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.enhancedNavCard:hover {
+  background: #f1f5f9;
+  border-color: #006838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 77, 44, 0.08);
+}
+
+.navCardIconWrapper {
+  background: #004d2c;
+  color: #ffffff;
+  padding: 0.6rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navCardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.navCardTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.navCardDesc {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.navCardArrow {
+  color: #94a3b8;
+  transition: transform 0.2s ease;
+}
+
+.enhancedNavCard:hover .navCardArrow {
+  transform: translateX(3px);
+  color: #004d2c;
+}
+
+/* Categories Summary Section - Single Big Section */
+.categoriesSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.categoryCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.categoryCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.categoryTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.categoryCount {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.iconBox {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+/* Responsive queries */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .bookingBoxContainer {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,111 @@
+.footer {
+  /* Institutional banking deep tone */
+  background-color: #101111;
+  color: #f2f5eb;
+  /* Banking style serif font family */
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  padding: 3rem 2rem;
+  border-top: 2px solid #1c2541;
+  border-bottom: 3px solid #1c2541;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.disclaimerSection {
+  flex: 0 0 65%;
+  max-width: 65%;
+  padding-right: 2rem;
+  /* Encircled / encountered with a bold line on the right boundary */
+  border-right: 3px solid #415a77;
+}
+
+.disclaimerText {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #adb5bd;
+  margin: 0;
+  text-align: justify;
+}
+
+.logoSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem; /* Creates space between the logo and the admin button */
+}
+
+.logoContainer {
+  /* Background and border removed to drop the logo cleanly */
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+
+.logo {
+  object-fit: contain; /* Changed from fill to contain to prevent image stretching */
+  height: 120px;
+}
+
+.adminButton {
+  /* Stunning modern banking styling */
+  background: linear-gradient(135deg, #1b4965 0%, #127785 100%);
+  border: 1px solid #415a77;
+  border-radius: 6px;
+  padding: 0 1.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  height: 50px; /* Balanced height compared to the logo */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.adminButton:hover {
+  background: linear-gradient(135deg, #22577a 05%, #1890a8 100%);
+  border-color: #6282a3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(18, 119, 133, 0.4);
+}
+
+.adminButton:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .disclaimerSection {
+    flex: 0 0 100%;
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 3px solid #415a77;
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+  }
+  .logoSection {
+    border-left: none;
+    padding-left: 0;
+    width: 100%;
+    flex-direction: row; /* Keeps logo and button side-by-side on mobile if space allows */
+    justify-content: center;
+  }
+}

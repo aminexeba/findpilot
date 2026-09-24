@@ -1,0 +1,40 @@
+.searchContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  height: 34px;
+  background-color: #ffffff;
+  border: 1px solid #0dabfa;
+  border-radius: 3px;
+  padding: 0 8px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.searchContainer:focus-within {
+  border-color: #2e69ff; /* Quora blue accent focus ring */
+  box-shadow: 0 0 0 1px #2e69ff;
+}
+
+.searchIcon {
+  width: 16px;
+  height: 16px;
+  color: #1a1919;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.searchInput {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #282829;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.searchInput::placeholder {
+  color: #101ff3;
+}

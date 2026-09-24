@@ -1,0 +1,294 @@
+/* src/app/dashboard/panel/panel.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-main: rgb(151, 84, 7);
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --border-hover: #cbd5e1;
+  --text-primary: #046809;
+  --text-muted: #111111;
+  --accent-primary: #3b82f6;
+  --danger-color: #ef4444;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+}
+
+.panelContainer {
+  background-color: rgb(235, 208, 177);
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-primary);
+  padding: 40px 24px;
+  box-sizing: border-box;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   Header Section
+   ========================================== */
+
+.panelHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 24px;
+  margin-bottom: 36px;
+}
+
+.headerTitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.panelTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.panelSubtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Stunning Top-Right Logout Button */
+.logoutBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--danger-color);
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.logoutBtn svg {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+}
+
+.logoutBtn:hover {
+  background: var(--danger-color);
+  color: #ffffff;
+  border-color: var(--danger-color);
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+  transform: translateY(-1px);
+}
+
+.logoutBtn:hover svg {
+  transform: translateX(3px);
+}
+
+.logoutBtn:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.2);
+}
+
+.logoutBtn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.4);
+}
+
+/* ==========================================
+   Panel Sections & Badges
+   ========================================== */
+
+.panelSection {
+  margin-bottom: 40px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sectionHeader h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+.badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.adminBadge {
+  background-color: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+.publishBadge {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.controlBadge {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+/* ==========================================
+   Card Grid & Dashboard Cards
+   ========================================== */
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 16px;
+}
+
+.panelCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  position: relative;
+}
+
+.panelCard:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.highlightCard {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-left: 4px solid var(--accent-primary);
+}
+
+/* Card Content Elements */
+
+.cardIcon {
+  font-size: 1.25rem;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.adminIcon {
+  background-color: #eff6ff;
+}
+
+.adminIcon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--accent-primary);
+}
+
+.cardContent {
+  flex-grow: 1;
+}
+
+.cardContent h3 {
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.cardContent p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.cardArrow {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, color 0.2s ease;
+  align-self: center;
+}
+
+.panelCard:hover .cardArrow {
+  color: var(--accent-primary);
+  transform: translateX(4px);
+}
+
+/* ==========================================
+   Responsive Adaptations
+   ========================================== */
+
+@media (max-width: 768px) {
+  .panelContainer {
+    padding: 24px 16px;
+  }
+
+  .panelHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .logoutBtn {
+    align-self: flex-start;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .panelTitle {
+    font-size: 1.5rem;
+  }
+
+  .panelCard {
+    padding: 16px;
+  }
+}

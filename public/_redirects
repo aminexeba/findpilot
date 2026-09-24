@@ -1,0 +1,20 @@
+# Rewrites for src/app/index routes
+/about         /index/about         200
+/brokerage     /index/brokerage     200
+/contact       /index/contact       200
+/pricing       /index/pricing       200
+/privacy       /index/privacy       200
+/services      /index/services      200
+
+# Rewrites for src/app/navpages routes
+/article             /navpages/article             200
+/article/:slug       /navpages/article/:slug       200
+/finance             /navpages/finance             200
+/hotel               /navpages/hotel               200
+/insurance           /navpages/insurance           200
+/job                 /navpages/job                 200
+/product             /navpages/product             200
+/service             /navpages/service             200
+
+# Sitemap rewrite (maps /sitemap.xml to your static sitemap)
+/sitemap.xml         /sitemap-static.xml           200

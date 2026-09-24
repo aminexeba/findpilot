@@ -1,0 +1,21 @@
+.cityContainer {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Container height */
+  background-image: url('/anim/city.jpg');
+  background-size: cover; /* Maintains aspect ratio without squeezing/distortion */
+  background-position: center; /* Centers the image nicely */
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border:solid;
+}
+
+.birdsLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Keeps birds flying on top of the city background */
+  pointer-events: none;
+}

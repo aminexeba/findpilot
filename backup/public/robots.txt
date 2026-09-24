@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://findpilot.cc/sitemap-static.xml
+Sitemap: https://findpilot.cc/sitemap-dynamic.xml

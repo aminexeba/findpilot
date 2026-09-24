@@ -1,0 +1,216 @@
+.navbarWrapper {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* 3-Column Grid guarantees exact horizontal centering for navLinks */
+.navbarContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.logo a {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #0f172a;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: opacity 0.2s ease;
+}
+
+.logo a:hover {
+  opacity: 0.75;
+}
+
+/* Center Navigation Tabs */
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Base style with bold outline */
+.navItem {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #070707;
+  background-color: #36daf7;
+  text-decoration: none;
+  border: 2px solid #334155;
+  border-radius: 9999px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navItem:hover {
+  background-color: #fc3909;
+  border-color: #0f172a;
+  color: #0f172a;
+  transform: translateY(-1px);
+}
+
+/* Click feedback effect */
+.navItem:active {
+  transform: scale(0.95);
+  background-color: #cbd5e1;
+}
+
+/* Active tab state */
+.active {
+  background-color: #dcf30e;
+  color: #1607f0;
+  border-color: #111111;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.active:hover {
+  background-color: #d64907;
+  border-color: #070707;
+  color: #ffffff;
+}
+
+.navCtaContainer {
+  justify-self: end;
+}
+
+/* Styled CTA Button */
+.navCta {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #8ff805 0%, #cfe604 100%);
+  text-decoration: none;
+  border-radius: 9999px;
+  border: 2px solid #0f0f0f;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+.navCta:hover {
+  background: linear-gradient(135deg, #f7b605 0%, #e3f305 100%);
+  border-color: #2563eb;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  transform: translateY(-1px);
+}
+
+.navCta:active {
+  transform: scale(0.95);
+}
+
+/* Left side opportunities link with bigger, red animated arrow */
+.opportunitiesLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.animatedArrow {
+  display: inline-block;
+  font-size: 1.4rem; /* Bigger size */
+  color: #ef4444;    /* Bold Red color */
+  font-weight: bold;
+  animation: bounceHorizontal 1.2s infinite ease-in-out;
+}
+
+@keyframes bounceHorizontal {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+/* Mobile Menu Toggle Button (Hidden on Desktop) */
+.mobileMenuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  justify-self: end;
+  z-index: 1001;
+}
+
+.hamburgerBar {
+  width: 100%;
+  height: 2px;
+  background-color: #0f172a;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Media Query for Mobile and Tablets */
+@media (max-width: 1024px) {
+  .navbarContainer {
+    grid-template-columns: auto auto;
+    padding: 10px 16px;
+  }
+
+  .navCtaContainer {
+    display: none; /* Hide desktop CTA to save space on smaller screens, or keep if preferred */
+  }
+
+  .mobileMenuToggle {
+    display: flex;
+  }
+
+  /* Transform navLinks into a mobile dropdown layout */
+  .navLinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e2e8f0;
+    gap: 8px;
+  }
+
+  .navLinks.mobileOpen {
+    display: flex;
+  }
+
+  /* Reduce tab sizes and padding to fit mobile screens */
+  .navItem {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    justify-content: center;
+    border-width: 1.5px;
+  }
+
+  .opportunitiesLink {
+    font-size: 0.85rem;
+  }
+
+  .animatedArrow {
+    font-size: 1.15rem;
+  }
+}

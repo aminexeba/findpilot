@@ -1,0 +1,108 @@
+/* searchinsurance.module.css */
+
+.bookingForm {
+  width: 100%;
+}
+
+.bookingGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  background-color: #febb02; /* Booking.com signature yellow frame */
+  padding: 4px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 900px) {
+  .bookingGrid {
+    grid-template-columns: 1.5fr 1.2fr 1.2fr auto;
+  }
+}
+
+.inputBox {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 12px;
+  transition: box-shadow 0.2s ease;
+}
+
+.inputBox:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.inputBox:last-of-type {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+@media (min-width: 900px) {
+  .inputBox:first-child {
+    border-radius: 6px 0 0 6px;
+    border-bottom-right-radius: 0;
+  }
+  .inputBox:last-of-type {
+    border-radius: 0;
+  }
+}
+
+.inputBox:focus-within {
+  box-shadow: inset 0 0 0 2px #0071c2;
+  z-index: 2;
+}
+
+.inputIcon {
+  color: #262626;
+  flex-shrink: 0;
+}
+
+.inputContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.textField {
+  background: transparent;
+  border: none;
+  color: #262626;
+  font-size: 0.95rem;
+  font-weight: 500;
+  outline: none;
+  width: 100%;
+}
+
+.textField::placeholder {
+  color: #707070;
+}
+
+.searchSubmitBtn {
+  background-color: #0071c2; /* Booking.com blue */
+  color: #ffffff;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-radius: 0 0 6px 6px;
+}
+
+@media (min-width: 900px) {
+  .searchSubmitBtn {
+    border-radius: 0 6px 6px 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.searchSubmitBtn:hover {
+  background-color: #00487a;
+}

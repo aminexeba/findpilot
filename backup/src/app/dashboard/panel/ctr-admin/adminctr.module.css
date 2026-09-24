@@ -1,0 +1,182 @@
+.adminContainer {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #333;
+}
+
+.adminTitle {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.loadingText {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.adminTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.adminTable th,
+.adminTable td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.adminTable th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.emptyRow {
+  text-align: center;
+  color: #6b7280;
+  padding: 24px !important;
+}
+
+.uidCell {
+  font-family: monospace;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.actionCell {
+  display: flex;
+  gap: 8px;
+}
+
+.editBtn,
+.deleteBtn,
+.pageBtn,
+.saveBtn,
+.cancelBtn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.editBtn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.editBtn:hover {
+  background-color: #2563eb;
+}
+
+.deleteBtn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.deleteBtn:hover {
+  background-color: #dc2626;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.pageBtn {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.pageBtn:hover:not(:disabled) {
+  background-color: #d1d5db;
+}
+
+.pageBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.editForm label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  font-weight: 500;
+  gap: 4px;
+  color: #374151;
+}
+
+.editForm input {
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.saveBtn {
+  background-color: #10b981;
+  color: white;
+}
+
+.saveBtn:hover {
+  background-color: #059669;
+}
+
+.cancelBtn {
+  background-color: #9ca3af;
+  color: white;
+}
+
+.cancelBtn:hover {
+  background-color: #6b7280;
+}

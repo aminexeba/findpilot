@@ -1,0 +1,39 @@
+C:\USERS\AMINE\DOWNLOADS\WEB-CODE-HOST\CODE-MEGAINSPIRING\MEGAINSPIRING\SRC
+├───app
+│   ├───dashboard
+│   │   ├───dflogin
+│   │   └───panel
+│   │       ├───add-admin
+│   │       ├───ctr-blog-product
+│   │       ├───ctr-blog-service
+│   │       ├───ctr-hotel
+│   │       ├───ctr-insurance
+│   │       ├───ctr-job
+│   │       ├───publish-blog-product
+│   │       ├───publish-blog-service
+│   │       ├───publish-hotel
+│   │       ├───publish-insurance
+│   │       ├───publish-job
+│   │       ├───publish-product
+│   │       └───publish-service
+│   ├───index
+│   │   ├───about
+│   │   ├───discover
+│   │   ├───pricing
+│   │   └───privacy
+│   └───navpages
+│       ├───article
+│       ├───blog-product
+│       ├───blog-service
+│       ├───finance
+│       ├───hotel
+│       ├───jobs
+│       ├───news
+│       └───service
+├───components
+│   ├───footer
+│   ├───forms
+│   ├───head
+│   ├───homepage
+│   └───navbar
+└───lib

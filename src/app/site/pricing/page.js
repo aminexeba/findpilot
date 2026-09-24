@@ -9,7 +9,7 @@ import React from 'react';
  */
 
 export default function PricingPage() {
-  const CONTACT_FORM_URL = "/index/contact";
+  const CONTACT_FORM_URL = "/site/contact";
 
   return (
     <div className="qp-page">

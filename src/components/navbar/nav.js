@@ -60,7 +60,7 @@ export default function Nav() {
 
         {/* Right Side: CTA */}
         <div className={styles.navCtaContainer}>
-          <Link href="/index/contact" className={styles.navCta}>
+          <Link href="/site/contact" className={styles.navCta}>
             Go Live
           </Link>
         </div>

@@ -54,25 +54,25 @@ export default function Topbar() {
 
         {/* Navigation Links */}
         <nav className={`${styles.navMenu} ${isMenuOpen ? styles.navMenuOpen : ''}`}>
-          <Link href="/index/privacy" className={styles.link} onClick={closeMenu}>
+          <Link href="/site/privacy" className={styles.link} onClick={closeMenu}>
             Privacy
           </Link>
-          <Link href="/index/about" className={styles.link} onClick={closeMenu}>
+          <Link href="/site/about" className={styles.link} onClick={closeMenu}>
             About&nbsp;us
           </Link>
-          <Link href="/index/services" className={styles.link} onClick={closeMenu}>
+          <Link href="/site/services" className={styles.link} onClick={closeMenu}>
             Services
           </Link>
-          <Link href="/index/brokerage" className={styles.link} onClick={closeMenu}>
+          <Link href="/site/brokerage" className={styles.link} onClick={closeMenu}>
             Brokerage solution
           </Link>
-          <Link href="/index/pricing" className={styles.link} onClick={closeMenu}>
+          <Link href="/site/pricing" className={styles.link} onClick={closeMenu}>
             Pricing
           </Link>
 
           {/* Mobile CTA Button (inside menu for small screens) */}
           <div className={styles.mobileCtaSlot}>
-            <Link href="/index/contact" className={styles.ctaBtn} onClick={closeMenu}>
+            <Link href="/site/contact" className={styles.ctaBtn} onClick={closeMenu}>
               Contact us 
             </Link>
           </div>
@@ -86,7 +86,7 @@ export default function Topbar() {
 
         {/* Right CTA (Desktop) */}
         <div className={styles.right}>
-          <Link href="/index/contact" className={styles.ctaBtn} onClick={closeMenu}>
+          <Link href="/site/contact" className={styles.ctaBtn} onClick={closeMenu}>
             contact us
           </Link>
         </div>

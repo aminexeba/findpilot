@@ -26,13 +26,13 @@ export default function NotFound() {
             <Link href="/" className={styles.linkItem}>
               🏠 Home
             </Link>
-            <Link href="/index/services" className={styles.linkItem}>
+            <Link href="/site/services" className={styles.linkItem}>
               🛠️ Services
             </Link>
-            <Link href="/index/brokerage" className={styles.linkItem}>
+            <Link href="/site/brokerage" className={styles.linkItem}>
               📦 brokerage
             </Link>
-            <Link href="/index/contact" className={styles.linkItem}>
+            <Link href="/site/contact" className={styles.linkItem}>
               📞 Contact Us
             </Link>
           </div>

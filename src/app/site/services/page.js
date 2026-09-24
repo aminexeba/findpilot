@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react';
 import Link from 'next/link';
 
@@ -8,6 +6,36 @@ import Link from 'next/link';
  * Route: http://localhost:3000/about
  * File: src/app/about/page.js
  */
+
+export const metadata = {
+  title: 'compare hotel, insurance, finance and more_ writing blog service | findpilot ',
+  description:
+    'Learn about FindPilot, a specialized agency connecting conscious consumers with exceptionally crafted products, unbiased reviews, buying guides, and supplier sourcing.',
+  keywords: [
+    'FindPilot',
+    'About FindPilot',
+    'product reviews',
+    'buying guides',
+    'product recommendations',
+    'affiliate agency',
+    'product sourcing',
+    'quality curation'
+  ],
+  openGraph: {
+    title: 'About Us | FindPilot',
+    description:
+      'Learn about FindPilot, a specialized agency connecting conscious consumers with exceptionally crafted products, buying guides, and reliable recommendations.',
+    url: 'https://findpilot.cc/site/about',
+    siteName: 'FindPilot',
+    type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Us | FindPilot',
+    description:
+      'Learn about FindPilot, a specialized agency connecting conscious consumers with exceptionally crafted products and trusted recommendations.'
+  }
+};
 
 export default function AboutPage() {
   return (
@@ -300,7 +328,7 @@ export default function AboutPage() {
             <p className="qp-cta-subtitle">
               Partner with us to feature your high-quality products in our next review or buyer guide.
             </p>
-            <Link href="/index/pricing" className="qp-btn">
+            <Link href="/site/pricing" className="qp-btn">
               View Pricing Options
             </Link>
           </div>

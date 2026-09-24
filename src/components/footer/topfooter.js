@@ -3,12 +3,12 @@ import styles from './topfooter.module.css';
 
 export default function TopFooter() {
   const serviceLinks = [
-    { name: 'Privacy', href: '/index/privacy' },
-    { name: 'About us', href: '/index/about' },
-    { name: 'Services', href: '/index/services' },
-    { name: 'Brokerage solution', href: '/index/brokerage' },
-    { name: 'Pricing', href: '/index/pricing' },
-    { name: 'Contact us', href: '/index/contact' },
+    { name: 'Privacy', href: '/site/privacy' },
+    { name: 'About us', href: '/site/about' },
+    { name: 'Services', href: '/site/services' },
+    { name: 'Brokerage solution', href: '/site/brokerage' },
+    { name: 'Pricing', href: '/site/pricing' },
+    { name: 'Contact us', href: '/site/contact' },
   ];
 
   const marketplaceLinks = [

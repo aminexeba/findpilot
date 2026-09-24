@@ -1,5 +1,9 @@
-Remove-Item -Recurse -Force .next
 npm cache clean --force
 
 deploy---
 Remove-Item -Recurse -Force .next, .netlify
+
+check netlify plugin------
+
+
+npm install -D @netlify/plugin-nextjs@latest
